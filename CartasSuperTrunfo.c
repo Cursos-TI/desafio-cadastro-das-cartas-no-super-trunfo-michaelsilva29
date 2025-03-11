@@ -146,6 +146,60 @@ printf("Densidade Populacional: %d\n", densidade1 < densidade2);
 printf("PIB per Capita: %d\n", pibpercapita1 > pibpercapita2);
 printf("Super Poder: %d\n", superpoder1 > superpoder2);
 
+// ADICIONA ESPAÇO ENTRE AS INFORMAÇÕES DA CARTA 1 E CARTA 2;
+printf("\n");
+
+//Utilizando Estrtura de decisão simples e composta para comparar as cartas;
+if (populacao1 > populacao2){
+
+    printf("Carta 1 - %s: %u\n", cidade1, populacao1 );
+    printf("Carta 2 - %s: %u\n", cidade2, populacao2);
+    printf("Resultado: Carta 1 (%s) Venceeu\n", cidade1);
+
+} else {
+
+    printf("Carta 1 - %s: %u\n", cidade1, populacao1 );
+    printf("Carta 2 - %s: %u\n", cidade2, populacao2);
+    printf("Resultado: Carta 2 (%s) Venceeu\n", cidade2);
+
+}
+
+// ADICIONA ESPAÇO ENTRE AS INFORMAÇÕES DA CARTA 1 E CARTA 2;
+printf("\n");
+
+//Comparando a área da carta 1 e 2
+if (area1 > area2){
+
+    printf("Carta 1 - %s: %.2f\n", cidade1, area1 );
+    printf("Carta 2 - %s: %.2f\n", cidade2, area2);
+    printf("Resultado: Carta 1 (%s) Venceeu\n", cidade1);
+
+} else {
+
+    printf("Carta 1 - %s: %.2f\n", cidade1, area1 );
+    printf("Carta 2 - %s: %.2f\n", cidade2, area2);
+    printf("Resultado: Carta 2 (%s) Venceeu\n", cidade2);
+
+}
+
+// ADICIONA ESPAÇO ENTRE AS INFORMAÇÕES DA CARTA 1 E CARTA 2;
+printf("\n");
+
+//Comparando o PIB da carta 1 e 2
+if (pib1 > pib2){
+
+    printf("Carta 1 - %s: %.2f\n", cidade1, pib1 );
+    printf("Carta 2 - %s: %.2f\n", cidade2, pib2);
+    printf("Resultado: Carta 1 (%s) Venceeu\n", cidade1);
+
+} else {
+
+    printf("Carta 1 - %s: %.2f\n", cidade1, pib1 );
+    printf("Carta 2 - %s: %.2f\n", cidade2, pib2);
+    printf("Resultado: Carta 2 (%s) Venceeu\nA", cidade2);
+
+}
+
 
 return 0;
 

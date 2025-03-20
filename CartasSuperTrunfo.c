@@ -6,7 +6,7 @@ int main(){
 char estado1[2], estado2[2];
 char carta1[6], carta2[6];
 char cidade1[20], cidade2[20];
-int  pontosturisticos1, pontosturisticos2;
+int  pontosturisticos1, pontosturisticos2, opcao;
 unsigned int populacao1, populacao2;
 float area1, area2, pib1, pib2, densidade1, pibpercapita1, densidade2, pibpercapita2, superpoder1, superpoder2;
 
@@ -149,59 +149,159 @@ printf("Super Poder: %d\n", superpoder1 > superpoder2);
 // ADICIONA ESPAÇO ENTRE AS INFORMAÇÕES DA CARTA 1 E CARTA 2;
 printf("\n");
 
-//Utilizando Estrtura de decisão simples e composta para comparar as cartas;
-if (populacao1 > populacao2){
 
-    printf("Carta 1 - %s: %u\n", cidade1, populacao1 );
-    printf("Carta 2 - %s: %u\n", cidade2, populacao2);
-    printf("Resultado: Carta 1 (%s) Venceeu\n", cidade1);
+// Menu para escolha de comparação dos atributos do usuário;
+printf("Menu Interativo do Supertrunfo\n");
+printf("Escolha os atributos para comparação\n");
+printf("1. População\n");
+printf("2. Área\n");
+printf("3. PIB\n"),
+printf("4. Número de Pontos Turísticos\n");
+printf("5. Densidade demográfica\n");
+scanf("%d", &opcao);
 
-} else {
+// Menu interativo para o usuário digitar sua opção;
+switch (opcao){
 
-    printf("Carta 1 - %s: %u\n", cidade1, populacao1 );
-    printf("Carta 2 - %s: %u\n", cidade2, populacao2);
-    printf("Resultado: Carta 2 (%s) Venceeu\n", cidade2);
+// Caso o usuário digite 1 esse bloco de comandos será executado;
+case 1:
+    if (populacao1 > populacao2) {        
+        printf("Carta 1: %s\n", cidade1);
+        printf("Carta 2: %s\n", cidade2);
+        printf("Carta 1: %u\n", populacao1);
+        printf("Carta 2: %u\n", populacao2);
+        printf("Carta 1 Venceu\n");
 
-}
-
-// ADICIONA ESPAÇO ENTRE AS INFORMAÇÕES DA CARTA 1 E CARTA 2;
-printf("\n");
-
-//Comparando a área da carta 1 e 2
-if (area1 > area2){
-
-    printf("Carta 1 - %s: %.2f\n", cidade1, area1 );
-    printf("Carta 2 - %s: %.2f\n", cidade2, area2);
-    printf("Resultado: Carta 1 (%s) Venceeu\n", cidade1);
-
-} else {
-
-    printf("Carta 1 - %s: %.2f\n", cidade1, area1 );
-    printf("Carta 2 - %s: %.2f\n", cidade2, area2);
-    printf("Resultado: Carta 2 (%s) Venceeu\n", cidade2);
-
-}
-
-// ADICIONA ESPAÇO ENTRE AS INFORMAÇÕES DA CARTA 1 E CARTA 2;
-printf("\n");
-
-//Comparando o PIB da carta 1 e 2
-if (pib1 > pib2){
-
-    printf("Carta 1 - %s: %.2f\n", cidade1, pib1 );
-    printf("Carta 2 - %s: %.2f\n", cidade2, pib2);
-    printf("Resultado: Carta 1 (%s) Venceeu\n", cidade1);
+} else if (populacao1 < populacao2) {
+        printf("Carta 1: %s\n", cidade1);
+        printf("Carta 2: %s\n", cidade2);
+        printf("Carta 1: %u\n", populacao1);
+        printf("Carta 2: %u\n", populacao2);
+        printf("Carta 2 Venceu\n");
 
 } else {
+        printf("Carta 1: %s\n", cidade1);
+        printf("Carta 2: %s\n", cidade2);
+        printf("Carta 1: %u\n", populacao1);
+        printf("Carta 2: %u\n", populacao2);
+        printf("Deu Empate\n");
+} 
 
-    printf("Carta 1 - %s: %.2f\n", cidade1, pib1 );
-    printf("Carta 2 - %s: %.2f\n", cidade2, pib2);
-    printf("Resultado: Carta 2 (%s) Venceeu\nA", cidade2);
+break;
+    // Caso o usuário digite 2 esse bloco de comandos será executado;
+case 2:
+
+   if (area1 > area2) {
+       printf("Carta 1: %s\n", cidade1);
+       printf("Carta 2: %s\n", cidade2);
+       printf("Carta 1: %.2f\n", area1);
+       printf("Carta 2: %.2f\n", area2);
+       printf("Carta 1 Venceu\n");
+
+} else if (area1 < area2) {
+       printf("Carta 1: %s\n", cidade1);
+       printf("Carta 2: %s\n", cidade2);
+       printf("Carta 1: %.2f\n", area1);
+       printf("Carta 2: %.2f\n", area2);
+       printf("Carta 2 Venceu\n");
+
+} else {
+       printf("Carta 1: %s\n", cidade1);
+       printf("Carta 2: %s\n", cidade2);
+       printf("Carta 1: %.2f\n", area1);
+       printf("Carta 2: %.2f\n", area2);
+       printf("Deu Empate\n");
+} 
+
+break;
+    // Caso o usuário digite 3 esse bloco de comandos será executado;
+case 3:
+
+   if (pib1 > pib2) {
+      printf("Carta 1: %s\n", cidade1);
+      printf("Carta 2: %s\n", cidade2);
+      printf("Carta 1: %.2f\n", pib1);
+      printf("Carta 2: %.2f\n", pib2);
+      printf("Carta 1 Venceu\n");
+
+} else if (pib1 < pib2) {
+      printf("Carta 1: %s\n", cidade1);
+      printf("Carta 2: %s\n", cidade2);
+      printf("Carta 1: %.2f\n", pib1);
+      printf("Carta 2: %.2f\n", pib2);
+      printf("Carta 2 Venceu\n");
+
+} else {
+      printf("Carta 1: %s\n", cidade1);
+      printf("Carta 2: %s\n", cidade2);
+      printf("Carta 1: %.2f\n", pib1);
+      printf("Carta 2: %.2f\n", pib2);
+      printf("Deu Empate\n");
+} 
+
+break;
+    // Caso o usuário digite 4 esse bloco de comandos será executado;
+case 4:
+
+   if (pontosturisticos1 > pontosturisticos2) {
+      printf("Carta 1: %s\n", cidade1);
+      printf("Carta 2: %s\n", cidade2);
+      printf("Carta 1: %d\n", pontosturisticos1);
+      printf("Carta 2: %d\n", pontosturisticos2);
+      printf("Carta 1 Venceu\n");
+
+} else if (pontosturisticos1 < pontosturisticos2) {
+      printf("Carta 1: %s\n", cidade1);
+      printf("Carta 2: %s\n", cidade2);
+      printf("Carta 1: %d\n", pontosturisticos1);
+      printf("Carta 2: %d\n", pontosturisticos2);
+      printf("Carta 2 Venceu\n");
+
+} else {
+      printf("Carta 1: %s\n", cidade1);
+      printf("Carta 2: %s\n", cidade2);
+      printf("Carta 1: %d\n", pontosturisticos1);
+      printf("Carta 2: %d\n", pontosturisticos2);
+      printf("Deu Empate\n");
+} 
+
+break;
+    // Caso o usuário digite 5 esse bloco de comandos será executado;
+case 5:
+
+if (densidade1 < densidade2) {
+    printf("Carta 1: %s\n", cidade1);
+    printf("Carta 2: %s\n", cidade2);
+    printf("Carta 1: %.2f\n", densidade1);
+    printf("Carta 2: %.2f\n", densidade2);
+    printf("Carta 1 Venceu\n");
+
+} else if (densidade1 > densidade2) {
+    printf("Carta 1: %s\n", cidade1);
+    printf("Carta 2: %s\n", cidade2);
+    printf("Carta 1: %.2f\n", densidade1);
+    printf("Carta 2: %.2f\n", densidade2);
+    printf("Carta 2 Venceu\n");
+
+} else {
+    printf("Carta 1: %s\n", cidade1);
+    printf("Carta 2: %s\n", cidade2);
+    printf("Carta 1: %.2f\n", densidade1);
+    printf("Carta 2: %.2f\n", densidade2);
+    printf("Deu Empate\n");
+} 
+
+break;
+    // Caso o usuário digite uma opção inválida o default será executado;
+default:
+
+    printf("Opção inválida, favor digitar opção correta\n");
+
+break;
 
 }
 
 
 return 0;
-
 
 }
